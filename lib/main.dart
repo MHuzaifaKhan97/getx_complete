@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_complete/navigationForNamedRoute/navigationForNamedRoute.dart';
+import 'package:getx_complete/navigationForNamedRoute/unKnowRoute.dart';
 import 'package:getx_complete/navigationForUnNamedRoute/navigationForUnNamedRoute.dart';
 import 'package:getx_complete/showDialog/showDialog.dart';
 import 'package:getx_complete/snackBar/snackBar.dart';
 import 'bottomSheetWithTheme/bottomSheetWithTheme.dart';
+import 'navigationForNamedRoute/secondScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,6 +22,23 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: LearningGetX(),
+      initialRoute: '/',
+      defaultTransition: Transition.zoom,
+      getPages: [
+        GetPage(name: '/', page: () => MyApp()),
+        GetPage(name: '/secondScreen', page: () => SecondScreen()),
+        // GetPage(
+        //   name: '/secondScreen',
+        //   page: () => SecondScreen(),
+        //   // transition: Transition.leftToRight,
+        // ),
+        GetPage(
+          name: '/secondScreen/:params',
+          page: () => SecondScreen(),
+          // transition: Transition.leftToRight,
+        ),
+      ],
+      unknownRoute: GetPage(name: '/notfound', page: () => UnKnownRoute()),
     );
   }
 }
@@ -33,7 +53,8 @@ class LearningGetX extends StatelessWidget {
       // body: SnackBarExample(),
       // body: ShowDialogExample(),
       // body: BottomWithSheetExample(),
-      body: NavigationForUnNamedRoute(),
+      // body: NavigationForUnNamedRoute(),
+      body: NavigationForNamedRoute(),
     );
   }
 }

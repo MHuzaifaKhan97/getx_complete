@@ -12,8 +12,12 @@ class SecondScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            // Text(
+            //   'Name: ${Get.parameters['name']} \nAge: ${Get.parameters['age']}',
+            //   style: TextStyle(color: Colors.red),
+            // ),
             Text(
-              'Name: ${Get.arguments}',
+              'Some Params: ${Get.parameters['params']}',
               style: TextStyle(color: Colors.red),
             ),
             Text(
@@ -23,7 +27,7 @@ class SecondScreen extends StatelessWidget {
             RaisedButton(
               color: Colors.blue,
               onPressed: () {
-                Get.back(result: "Data is this");
+                Get.back();
               },
               child: Text('Go Back', style: TextStyle(color: Colors.white)),
             )

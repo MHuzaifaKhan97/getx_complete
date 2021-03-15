@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SecondScreen extends StatelessWidget {
+class UnKnownRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Second Screen')),
+      appBar: AppBar(title: Text('404 Screen')),
       body: Container(
         width: MediaQuery.of(context).size.width,
         child: Column(
@@ -13,20 +13,9 @@ class SecondScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              'Name: ${Get.arguments}',
+              '404 Not Found',
               style: TextStyle(color: Colors.red),
             ),
-            Text(
-              'Second Screen',
-              style: TextStyle(color: Colors.white),
-            ),
-            RaisedButton(
-              color: Colors.blue,
-              onPressed: () {
-                Get.back(result: "Data is this");
-              },
-              child: Text('Go Back', style: TextStyle(color: Colors.white)),
-            )
           ],
         ),
       ),
