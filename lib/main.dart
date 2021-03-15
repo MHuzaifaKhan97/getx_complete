@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_complete/showDialog/showDialog.dart';
 import 'package:getx_complete/snackBar/snackBar.dart';
+import 'bottomSheetWithTheme/bottomSheetWithTheme.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,7 +30,8 @@ class LearningGetX extends StatelessWidget {
         title: Text('Learning Getx'),
       ),
       // body: SnackBarExample(),
-      body: ShowDialogExample(),
+      // body: ShowDialogExample(),
+      body: BottomWithSheetExample(),
     );
   }
 }
