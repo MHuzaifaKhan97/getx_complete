@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_complete/navigationForUnNamedRoute/navigationForUnNamedRoute.dart';
 import 'package:getx_complete/showDialog/showDialog.dart';
 import 'package:getx_complete/snackBar/snackBar.dart';
 import 'bottomSheetWithTheme/bottomSheetWithTheme.dart';
@@ -31,7 +32,8 @@ class LearningGetX extends StatelessWidget {
       ),
       // body: SnackBarExample(),
       // body: ShowDialogExample(),
-      body: BottomWithSheetExample(),
+      // body: BottomWithSheetExample(),
+      body: NavigationForUnNamedRoute(),
     );
   }
 }
