@@ -5,6 +5,7 @@ import 'package:getx_complete/navigationForNamedRoute/unKnowRoute.dart';
 import 'package:getx_complete/navigationForUnNamedRoute/navigationForUnNamedRoute.dart';
 import 'package:getx_complete/showDialog/showDialog.dart';
 import 'package:getx_complete/snackBar/snackBar.dart';
+import 'package:getx_complete/statemanagement/stateManagement.dart';
 import 'bottomSheetWithTheme/bottomSheetWithTheme.dart';
 import 'navigationForNamedRoute/secondScreen.dart';
 
@@ -54,7 +55,8 @@ class LearningGetX extends StatelessWidget {
       // body: ShowDialogExample(),
       // body: BottomWithSheetExample(),
       // body: NavigationForUnNamedRoute(),
-      body: NavigationForNamedRoute(),
+      // body: NavigationForNamedRoute(),
+      body: ReactiveStateManagement(),
     );
   }
 }
