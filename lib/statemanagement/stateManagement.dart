@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_complete/statemanagement/student.dart';
 
 class ReactiveStateManagement extends StatelessWidget {
   var count = (0).obs;
   void increment() {
     count += 1;
   }
+
+// first way
+  // var student = Student();
+
+// second way
+  final student = Student(name: 'Huzaifa', age: 23).obs;
 
   @override
   Widget build(BuildContext context) {
@@ -24,19 +31,39 @@ class ReactiveStateManagement extends StatelessWidget {
           Obx(
             () => Container(
               child: Text(
-                'Count Value is $count',
+                'Student Name is ${student.value.name}',
                 style: TextStyle(fontSize: 22),
               ),
             ),
           ),
           RaisedButton(
             color: Colors.blue,
-            onPressed: () => increment(),
+            onPressed: () {
+              student.update((student) {
+                student.name = student.name.toString().toUpperCase();
+              });
+            },
             child: Text(
-              'Show SnackBar',
+              'Upper',
               style: TextStyle(color: Colors.white),
             ),
           )
+          //   Obx(
+          //   () => Container(
+          //     child: Text(
+          //       'Count Value is $count',
+          //       style: TextStyle(fontSize: 22),
+          //     ),
+          //   ),
+          // ),
+          // RaisedButton(
+          //   color: Colors.blue,
+          //   onPressed: () => increment(),
+          //   child: Text(
+          //     'Increment',
+          //     style: TextStyle(color: Colors.white),
+          //   ),
+          // )
         ],
       ),
     );
