@@ -16,7 +16,7 @@ class GetxLifeCycle extends StatelessWidget {
         children: [
           Container(
             child: Text(
-              'Simple State Management',
+              'Getx LifeCycle Method',
               style: TextStyle(fontSize: 22),
             ),
           ),
