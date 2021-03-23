@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_complete/getxLifeCycleMethod/stateManagement.dart';
 import 'package:getx_complete/getxWithControllerType/stateManagement.dart';
 import 'package:getx_complete/navigationForNamedRoute/navigationForNamedRoute.dart';
 import 'package:getx_complete/navigationForNamedRoute/unKnowRoute.dart';
@@ -62,7 +63,8 @@ class LearningGetX extends StatelessWidget {
       // body: ReactiveStateManagement(),
       // body: SeperateUIAndLogic(),
       // body: GetxWithControllerType(),
-      body: GetBuilderExample(),
+      // body: GetBuilderExample(),
+      body: GetxLifeCycle(),
     );
   }
 }
