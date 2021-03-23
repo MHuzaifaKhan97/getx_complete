@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_complete/getxWithControllerType/stateManagement.dart';
 import 'package:getx_complete/navigationForNamedRoute/navigationForNamedRoute.dart';
 import 'package:getx_complete/navigationForNamedRoute/unKnowRoute.dart';
 import 'package:getx_complete/navigationForUnNamedRoute/navigationForUnNamedRoute.dart';
@@ -49,16 +50,16 @@ class LearningGetX extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Learning Getx'),
-      ),
-      // body: SnackBarExample(),
-      // body: ShowDialogExample(),
-      // body: BottomWithSheetExample(),
-      // body: NavigationForUnNamedRoute(),
-      // body: NavigationForNamedRoute(),
-      // body: ReactiveStateManagement(),
-      body: SeperateUIAndLogic(),
-    );
+        appBar: AppBar(
+          title: Text('Learning Getx'),
+        ),
+        // body: SnackBarExample(),
+        // body: ShowDialogExample(),
+        // body: BottomWithSheetExample(),
+        // body: NavigationForUnNamedRoute(),
+        // body: NavigationForNamedRoute(),
+        // body: ReactiveStateManagement(),
+        // body: SeperateUIAndLogic(),
+        body: GetxWithControllerType());
   }
 }
