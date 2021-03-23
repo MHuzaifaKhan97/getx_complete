@@ -6,6 +6,7 @@ import 'package:getx_complete/navigationForNamedRoute/unKnowRoute.dart';
 import 'package:getx_complete/navigationForUnNamedRoute/navigationForUnNamedRoute.dart';
 import 'package:getx_complete/seperateUIwithLoginUsingController/stateManagement.dart';
 import 'package:getx_complete/showDialog/showDialog.dart';
+import 'package:getx_complete/simpleStateManagerGetBuilder/stateManagement.dart';
 import 'package:getx_complete/snackBar/snackBar.dart';
 import 'package:getx_complete/statemanagement/stateManagement.dart';
 import 'bottomSheetWithTheme/bottomSheetWithTheme.dart';
@@ -50,16 +51,18 @@ class LearningGetX extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Learning Getx'),
-        ),
-        // body: SnackBarExample(),
-        // body: ShowDialogExample(),
-        // body: BottomWithSheetExample(),
-        // body: NavigationForUnNamedRoute(),
-        // body: NavigationForNamedRoute(),
-        // body: ReactiveStateManagement(),
-        // body: SeperateUIAndLogic(),
-        body: GetxWithControllerType());
+      appBar: AppBar(
+        title: Text('Learning Getx'),
+      ),
+      // body: SnackBarExample(),
+      // body: ShowDialogExample(),
+      // body: BottomWithSheetExample(),
+      // body: NavigationForUnNamedRoute(),
+      // body: NavigationForNamedRoute(),
+      // body: ReactiveStateManagement(),
+      // body: SeperateUIAndLogic(),
+      // body: GetxWithControllerType(),
+      body: GetBuilderExample(),
+    );
   }
 }
